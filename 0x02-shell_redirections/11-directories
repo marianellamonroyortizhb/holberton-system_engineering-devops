@@ -1,2 +1,4 @@
 #!/bin/bash
+find 
+ls -a | ls -A 
 ls | wc -la
