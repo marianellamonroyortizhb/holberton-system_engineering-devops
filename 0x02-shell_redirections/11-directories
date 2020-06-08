@@ -1,4 +1,2 @@
 #!/bin/bash
-find 
-ls -a | ls -A 
-ls | wc -la
+find ./* type -d | wc
