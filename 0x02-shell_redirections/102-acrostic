@@ -1,2 +1,2 @@
 #!/bin/bash
-paste -d ' ' -s | cut -c 1
+cut -c 1 acrostic | paste -d ' ' -s
