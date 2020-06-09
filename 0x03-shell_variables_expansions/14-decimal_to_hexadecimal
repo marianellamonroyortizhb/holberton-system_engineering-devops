@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%.2x\n" $NUM
+printf "%x\n" $NUM
