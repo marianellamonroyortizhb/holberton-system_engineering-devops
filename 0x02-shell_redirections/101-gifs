@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a | find . -type f -iname "*.git" -printf "%f\n"
+find . -type f -iname "*.gif" -printf "%f\n" | rev | cut -d. -f 2,3 | rev
