@@ -1,2 +1,0 @@
-perl -ne 'print ((0 == $. % 4) ? $_ : "")'  #!/bin/bash
-awk 'NR%2'
