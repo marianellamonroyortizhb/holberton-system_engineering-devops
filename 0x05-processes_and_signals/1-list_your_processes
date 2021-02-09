@@ -1,1 +1,5 @@
 #!/usr/bin/env bash
+# ps, -, a, u, f, x . Respectively:
+# process status, UNIX, all process, user-oriented format,
+# ASCII hierarchy, even without a tty.
+ps -aufx
