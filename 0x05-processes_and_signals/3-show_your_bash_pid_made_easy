@@ -1,1 +1,3 @@
 #!/usr/bin/env bash
+#pgrep search the process with an specific name (bash) and -l list name and PID
+pgrep -l bash
