@@ -1,1 +1,4 @@
 #!/usr/bin/env bash
+# Find the word bash inside the list of process, using grep after the execution
+# shellcheck disable=SC2009
+ps -auf | grep bash
