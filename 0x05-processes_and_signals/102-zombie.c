@@ -29,8 +29,9 @@ int main(void)
 	int count_zombies;
 	pid_t zombie_id;
 
-	while (count_zombies > 5)
+	while (count_zombies < 6)
 	{
+		count_zombies = 1;
 		zombie_id = fork();
 
 		if (zombie_id <= 0)
