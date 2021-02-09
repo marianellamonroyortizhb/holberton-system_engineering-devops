@@ -4,7 +4,8 @@
 #include <stdlib.h>
 
 /**
- * infinite_while - Function that generate and infinite loop.
+ * infinite_while - Function that generates and infinite loop.
+ * void: empty
  * Return: zero.
 */
 
@@ -19,6 +20,7 @@ int infinite_while(void)
 
 /**
  * main - Function that creates five zombies and stop the infinite loop.
+ *
  * Return: zero.
 */
 
@@ -31,11 +33,13 @@ int main(void)
 	{
 		zombie_id = fork();
 
-		if (zombie_id > 5)
+		if (zombie_id <= 0)
 			exit(0);
 		else
+		{
 			printf("Zombie process created, PID: %d\n", zombie_id);
 			sleep(1);
+		}
 	}
 	infinite_while();
 	return (0);
