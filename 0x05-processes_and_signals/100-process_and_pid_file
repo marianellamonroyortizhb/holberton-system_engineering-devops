@@ -3,9 +3,9 @@
 echo $$ >> /var/run/holbertonscript.pid
 
 while true; do
-	echo "To infinity and beyond"
-	trap "echo I hate the kill command" SIGTERM
-	trap "sudo rm /var/run/holbertonscript.pid; exit" SIGTERM SIGQUIT
+	trap "echo I hate the kill command; sudo rm /var/run/holbertonscript.pid; exit" SIGTERM
+	trap "sudo rm /var/run/holbertonscript.pid" SIGQUIT
 	trap "echo Y U no love me?!" SIGINT
+	echo "To infinity and beyond"
 	sleep 2
 done
