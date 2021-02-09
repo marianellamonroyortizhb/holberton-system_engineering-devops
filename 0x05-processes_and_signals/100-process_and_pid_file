@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Create a file containing the PID and send some traps.
-echo $$ >> /var/run/holbertonscript.pid
+echo $$ >> holbertonscript.pid
+sudo mv holbertonscript.pid /var/run/
 
 while true; do
 	trap "echo I hate the kill command; sudo rm /var/run/holbertonscript.pid; exit" SIGTERM
