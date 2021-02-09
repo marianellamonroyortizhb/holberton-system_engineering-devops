@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Write an infinity loop with sleep
 while true; do
 	echo "To infinity and beyond"
 	sleep 2
