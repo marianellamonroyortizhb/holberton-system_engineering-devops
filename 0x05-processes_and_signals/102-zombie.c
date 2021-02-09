@@ -40,6 +40,7 @@ int main(void)
 			printf("Zombie process created, PID: %d\n", zombie_id);
 			sleep(1);
 		}
+	count_zombies++;
 	}
 	infinite_while();
 	return (0);
