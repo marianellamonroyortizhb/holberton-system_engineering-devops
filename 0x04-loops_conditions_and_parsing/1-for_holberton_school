@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Prints 10 times Holberton School
-for i in {1..10}
+for ((count = 1; count<=10; count++))
 do
 	echo "Holberton School"
 done
