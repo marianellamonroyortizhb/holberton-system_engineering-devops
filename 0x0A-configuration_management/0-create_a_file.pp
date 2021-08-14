@@ -1,8 +1,8 @@
 # Create the file holberton
 file {'holberton':
   path    => '/tmp/holberton',
-  content => 'I love Puppet',
+  mode    => '0744',
   owner   => 'www-data',
   group   => 'www-data',
-  mode    => '0744'
+  content => 'I love Puppet'
 }
