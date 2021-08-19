@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#Ubuntu Vagrant machine SSH configuration file for the local SSH
+Host default
+  HostName 104.196.185.70
+  User ubuntu
+  Port 22
+  PasswordAuthentication no
+  IdentifyFile /home/vagrant/.ssh/holberton
