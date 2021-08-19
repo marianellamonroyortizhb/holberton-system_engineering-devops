@@ -1,12 +1,9 @@
-#!/usr/bin/env bash
-# Create the file holberton
-file {'~/.ssh/holberton':
-  path    => '/etc/ssh/holberton',
-  mode    => '7000',
-  content => 'Host default
-  HostName 104.196.185.70
-  User ubuntu
-  Port 22
-  PasswordAuthentication no
-  IdentifyFile /home/vagrant/.ssh/holberton',
+# using Puppet to make changes to our configuration file.
+file_line {  'passw_no_autentication':
+  path => '/etc/ssh/ssh_config',
+  line => 'PasswordAuthentication no',
+}
+file_line {  'passw_direction':
+  path => '/etc/ssh/ssh_config',
+  line => 'IdentityFile ~/.ssh/holberton',
 }
