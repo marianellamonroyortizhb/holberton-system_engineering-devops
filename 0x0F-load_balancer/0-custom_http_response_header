@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 # Setup nginx web server. The HTTP response has a custom header 
-sudo apt -y update
-sudo apt install -y nginx
-sudo ufw allow 'Nginx HTTP'
+sudo apt-get -y update
+sudo apt-get -y install nginx
 sudo echo "Holberton School" | sudo tee /var/www/html/index.html
 sudo sed -i '/listen 80 default_server;/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
 sudo echo -e "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
 sudo sed -i '/listen 80 default_server;/a \\terror_page 404 /custom_404.html;\n\tlocation = /custom_404.html {\n\t\troot /usr/share/nginx/html;\n\t\tinternal;\n\t}' /etc/nginx/sites-available/default
 sudo sed -i '/listen 80 default_server;/a add_header X-Served-By $HOSTNAME;' /etc/nginx/sites-available/default
-sudo service nginx restart
+sudo service nginx start
